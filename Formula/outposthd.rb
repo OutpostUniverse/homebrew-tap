@@ -12,11 +12,11 @@ class Outposthd < Formula
     strategy :github_latest
   end
 
+  depends_on "glew"
   depends_on "sdl2"
   depends_on "sdl2_image"
   depends_on "sdl2_mixer"
   depends_on "sdl2_ttf"
-  depends_on "glew"
 
   def install
     system "git", "submodule", "update", "--init", "--recursive" if build.head?
