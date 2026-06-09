@@ -1,22 +1,22 @@
 # Homebrew formula for installing OPHD on macOS
 class Outposthd < Formula
-  desc "OutpostHD - Open source remake of Sierra On-Line's Outpost"
+  desc "Open source remake of Sierra On-Line's Outpost"
   homepage "https://github.com/OutpostUniverse/OPHD"
-  license "BSD-3-Clause"
   url "https://github.com/OutpostUniverse/OPHD.git", branch: "main"
-  head "https://github.com/OutpostUniverse/OPHD.git", branch: "main"
   version "head"
+  license "BSD-3-Clause"
+  head "https://github.com/OutpostUniverse/OPHD.git", branch: "main"
 
   livecheck do
     url :stable
     strategy :github_latest
   end
 
+  depends_on "glew"
   depends_on "sdl2"
   depends_on "sdl2_image"
   depends_on "sdl2_mixer"
   depends_on "sdl2_ttf"
-  depends_on "glew"
 
   def install
     system "git", "submodule", "update", "--init", "--recursive" if build.head?
@@ -79,4 +79,3 @@ class Outposthd < Formula
     end
   end
 end
-
