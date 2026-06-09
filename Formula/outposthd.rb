@@ -79,4 +79,3 @@ class Outposthd < Formula
     end
   end
 end
-
