@@ -2,10 +2,10 @@
 class Outposthd < Formula
   desc "Open source remake of Sierra On-Line's Outpost"
   homepage "https://github.com/OutpostUniverse/OPHD"
-  license "BSD-3-Clause"
   url "https://github.com/OutpostUniverse/OPHD.git", branch: "main"
-  head "https://github.com/OutpostUniverse/OPHD.git", branch: "main"
   version "head"
+  license "BSD-3-Clause"
+  head "https://github.com/OutpostUniverse/OPHD.git", branch: "main"
 
   livecheck do
     url :stable
